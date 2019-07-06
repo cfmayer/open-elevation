@@ -1,6 +1,6 @@
 FROM geodata/gdal:2.1.3
 
-ADD ./requirements.txt .
+ADD ../requirements.txt .
 
 RUN pip install -r requirements.txt
 
@@ -10,7 +10,7 @@ RUN apt-get install -y libspatialindex-dev unar bc
 
 RUN mkdir /code
 
-ADD . /code/
+ADD .. /code/
 
 WORKDIR /code
 
